@@ -1,0 +1,113 @@
+@import 'variables';
+@import 'functions';
+
+body{
+    margin: 0;
+    padding: 0
+}
+html{
+    font-size: 13px;
+}
+p{
+    margin: 0
+}
+h2{
+    margin: 0
+}
+// ====================CATEGORY===================
+.category{
+    background-color: $mainColor;
+    h2{
+        @extend %boldplay;
+    }
+}
+// ====================MAIN===================
+
+.main{
+    h3{
+        @extend %boldplay;
+        font-weight: bold;
+    }
+    p{
+        @extend %regularOpenSans;
+    }
+    button{
+        @extend %btn;
+        background-color: $mainColor !important;
+        @extend %regularOpenSans;
+
+    }
+
+    img{
+        position: relative;
+    }
+    .date{
+        background: $mainColor;
+        position: absolute;
+        top:13%;
+        @extend %regularOpenSans;
+
+    }
+    .date2{
+        background: $mainColor;
+        position: absolute;
+        top:46%;
+        @extend %regularOpenSans;
+    }
+    .date3{
+        background: $mainColor;
+        position: absolute;
+        top:80%;
+        @extend %regularOpenSans;
+    }
+}
+// ==================recent-posts=================
+.recent-posts{
+    h3{
+        @extend %boldplay;
+        color: $iconsColor;
+        font-weight: bold
+    }
+}
+// ==================LATEST PROJECTS=================
+.latest-projects{
+    h3{
+        @extend %boldplay;
+        color: $iconsColor;
+        font-weight: bold;
+    }
+    img{
+        width: 100%;
+    }
+}
+//=================== BLOG CATEGORIES====================
+.blog-categories{
+    h3{
+        @extend %boldplay;
+        color: $iconsColor;
+        font-weight: bold;
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+        i{
+            color:$mainColor ;
+        }
+    }
+}
+
+// ====================MEDIA QUERY=======================
+@media only screen and (max-width: 1200px) {
+    .main .date,.date2,.date3{
+        display: none;
+    }
+ 
+    
+}
+@media only screen and (max-width: 600px) {
+
+   html{
+    font-size: 10px;
+}
+}
+

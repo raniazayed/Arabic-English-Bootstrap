@@ -1,0 +1,235 @@
+@import 'variables';
+@import 'functions';
+@import 'news';
+@import 'contact';
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+html{
+	height: 100%;
+	font-size: 12px;
+
+}
+body{
+	
+margin:0;
+padding: 0;
+}
+//=============== CONTACT-BAR=================
+.contact-bar{
+	.contact-nums{
+		span{
+			@extend %regularOpenSans;
+			font-size: 10px;
+		}
+		i{
+			color: $iconsColor;
+			font-size: 10px;
+
+
+		}
+	}
+	.social-media{
+		i{
+			color: $iconsColor;
+		}
+	}
+}
+
+// =================NAVBAR=================
+nav{
+	ul{
+		@extend %regularOpenSans;
+		li{
+			&.active a.nav-link{
+				color: $mainColor !important;
+			}
+		}
+	}
+}
+
+//=================SLIDER===================
+.header-content{
+	top:30%;
+	h5{
+		@include typoStyle('Raleway-SemiBold.ttf',50px);
+		text-transform: uppercase;
+	}
+	p{
+		@extend %regularOpenSans;
+
+	}
+	button{
+		@extend %btn;
+
+	}
+}
+//==================home wrapper==================
+
+.home-wrapper{
+	background: $bgColor;
+	.wrapper{
+		i{
+			color: $iconsColor;
+			font-size: 40px
+		}
+		h3{
+			@include typoStyle('Raleway-SemiBold.ttf',24px);
+			color: $mainColor;
+			text-transform: uppercase
+		}
+		p{
+			@extend %regularOpenSans;
+
+		}
+	}
+}
+
+//==================RECENT PROJECT==================
+.recent-projects{
+	h2{
+		@extend %boldplay;
+		color: $mainColor;
+	}
+	.line{
+		// @extend %line;
+		background: $mainColor;
+		width: 70px;
+		height: 1px;
+		display: block;
+	}
+	.wrapper{
+		overflow: hidden;
+		height: auto;
+	}
+	.recentpro1,.recentpro2,.recentpro3{
+		@include background-image($recentpro1);
+		height: 200px;
+		position: relative;
+		i{
+			opacity: 0;
+		}
+		&:hover{
+			i{
+				display: block !important;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				opacity: 1;
+
+			}
+			background-color: #169dd8;
+			background-blend-mode: overlay;
+
+		}
+	}
+	.recentpro2{
+		@include background-image($recentpro2);
+		height: 200px;
+	}
+	.recentpro3{
+		@include background-image($recentpro1);
+		height: 200px;
+	}
+	
+}
+//==================statistics==================
+
+.statistics{
+	background-color: $mainColor;
+	.line{
+		@extend %line
+	}
+}
+// ==========================from-blog===========================
+
+.from-blog{
+	.wrapper{
+		overflow: hidden;
+	}
+	h2{
+		color: $mainColor;
+	}
+	.line{
+		width: 70px;
+		height: 1px;
+		background: $mainColor;
+		display: block;
+	}
+	.bg{
+		background: $bgColor;
+	}
+	.img-height {
+		img{
+			// height: 43vh !important;
+		}
+	}
+}
+// ==========================get-in-toutch===========================
+.get-in-toutch{
+	background-color:$mainColor;
+	color: white;
+	button{
+		@extend %btn;
+		text-transform: uppercase;
+	}
+	p{
+		@extend %regularplay;
+		margin: 0;
+
+	}
+}
+// =================================FOOTER===========================
+footer{
+	background-color: $footerBgColor;
+	color: white;
+	i{
+		color:$mainColor;
+		font-size: 10px;
+	}
+	h5{
+		color: $mainColor;
+		@extend %boldplay;
+		font-weight: bold;
+		font-size: 1.6rem;
+	}
+	ul{
+		list-style: none;
+		padding: 0;
+		
+	}
+	p{
+		@extend	%regularOpenSans
+	}
+
+}
+// =================================copy-right===========================
+
+.copy-right{
+	background-color: black;
+	@extend %regularOpenSans;
+	i{
+		color: red
+	}
+	p{margin: 0}
+}
+
+// MEDIA QUERY
+@media only screen and (max-width: 600px) {
+	.contact-bar .contact{
+		display: none
+	}
+	.social-media {
+		text-align: center;
+	}
+	.logo{
+		width: 125px;
+	}
+	html{
+		font-size: 10px;
+}
+}

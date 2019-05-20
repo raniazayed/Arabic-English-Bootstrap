@@ -1,0 +1,31 @@
+@import 'variables';
+@import 'functions';
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.contact-us{
+    h2{
+        @extend %boldplay;
+        color: $mainColor
+    }
+    .line{
+        width: 50px;
+        height: 1px;
+        background-color: $mainColor
+    }
+    button{
+        @extend %btn;
+        background-color: $mainColor;
+        font-size: 1.3rem;
+    }
+    input{
+        font-size: 14px;
+    }
+}
+// ===========================MAP=======================
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }
